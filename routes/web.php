@@ -11,6 +11,4 @@
 |
 */
 
-Route::get('/', function () {
-    return view('tweets');
-});
+Route::get('/', 'TweetsController@index')->name('tweets.index');
