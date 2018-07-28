@@ -69,9 +69,12 @@ class TweetsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Tweet $tweet)
     {
-        //
+        $tweet->likes = $request->likes;
+        $tweet->save();
+
+        return response()->json('Success', 200);
     }
 
     /**

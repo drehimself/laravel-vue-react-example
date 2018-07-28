@@ -12,3 +12,4 @@
 */
 
 Route::get('/', 'TweetsController@index')->name('tweets.index');
+Route::patch('/{tweet}', 'TweetsController@update')->name('tweets.update');
